@@ -1,0 +1,104 @@
+#include <LiquidCrystal.h>
+int r1=A0;
+int r2=A1;
+int r3=A2;
+int r4=A3;
+int r5=A4;
+int r6=A5;
+int r7=A6;
+int r8=A7;
+int r9=A13;
+int r0=A14;
+LiquidCrystal lcd(9, 8, 7, 6, 5, 4, 3, 2, A12, A11);
+void setup()
+{
+// set up the LCD's number
+of columns and rows:
+lcd.begin(20, 2);
+// Print a message to the LCD.
+pinMode(r1, OUTPUT);
+  digitalWrite(r1, LOW);
+pinMode(r2, OUTPUT);
+  digitalWrite(r2, LOW);
+pinMode(r3, OUTPUT);
+  digitalWrite(r3, LOW);
+pinMode(r4, OUTPUT);
+  digitalWrite(r4, LOW);
+pinMode(r5, OUTPUT);
+  digitalWrite(r5, LOW);
+pinMode(r6, OUTPUT);
+  digitalWrite(r6, LOW);
+pinMode(r7, OUTPUT);
+  digitalWrite(r7, LOW);
+pinMode(r8, OUTPUT);
+  digitalWrite(r8, LOW);
+pinMode(r9, OUTPUT);
+  digitalWrite(r9, LOW);
+pinMode(r0, OUTPUT);
+  digitalWrite(r0, LOW);
+  Serial.begin(9600);
+}
+// the loop routine runs over
+ and over again forever:
+void loop() {
+lcd.setCursor(0,0);
+lcd.print("  HOME AUTOMATION ");
+lcd.setCursor(0,1);
+lcd.print(" give voice command");
+delay(5);
+if (Serial.available() >= 2)
+{
+char numRelay = Serial.read();
+char newState = Serial.read();
+switch (numRelay)
+{
+case '1':
+  adjustRelay(r1,newState);
+  break;
+case '2':
+  adjustRelay(r2,newState);
+  break;
+case '3':
+  adjustRelay(r3,newState);
+  break;
+case '4':
+  adjustRelay(r4,newState);
+  break;
+case '5':
+  adjustRelay(r5,newState);
+  break;
+case '6':
+  adjustRelay(r6,newState);
+  break;
+case '7':
+  adjustRelay(r7,newState);
+  break;
+case '8':
+  adjustRelay(r8,newState);
+  break;
+case '9':
+  adjustRelay(r9,newState);
+  break;
+case '0':
+  adjustRelay(r0,newState);
+  break;
+  }
+}
+}
+void adjustRelay(int whichPin, char setState)
+{
+  if (setState=='0')
+  {
+    Serial.write(" OFF");
+    Serial.write(" CLOSE");
+    digitalWrite(whichPin, LOW);
+
+  }
+  else if(setState=='1')
+    {
+    Serial.write(" ON");
+    Serial.write(" OPEN");
+    digitalWrite(whichPin, HIGH);
+    }
+  }
+\end{verbat
