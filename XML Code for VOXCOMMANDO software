@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-16"?>
+<commandGroup open="True" name="HA" enabled="True" prefix="" priority="0" requiredProcess="" description="">
+  <command id="270" name="begain" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+    <action>
+      <cmdType>PY.ExecFile</cmdType>
+      <cmdString>PY\HA.py</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <event>VC.Loaded</event>
+  </command>
+
+<command id="303" name="fan OFF" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("10")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>fan OFF</phrase>
+  </command>
+
+<command id="305" name="fan ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("11")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>fan ON</phrase>
+  </command>
+
+<command id="303" name="kitchen light OFF" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("20")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>kitchen light OFF</phrase>
+  </command>
+
+<command id="305" name="kitchen light ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("21")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>kitchen light ON</phrase>
+  </command>
+
+<command id="303" name="main light OFF" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("30")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>main light OFF</phrase>
+  </command>
+
+<command id="305" name="main light ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("31")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>main light ON</phrase>
+  </command>
+
+<command id="303" name="TV OFF" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("40")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>TV OFF</phrase>
+  </command>
+
+<command id="305" name="TV ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("41")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>TV ON</phrase>
+  </command>
+
+<command id="303" name="AC OFF" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("50")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>AC OFF</phrase>
+  </command>
+
+<command id="305" name="AC ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("51")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>AC ON</phrase>
+  </command>
+
+<command id="303" name="up " enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("6081")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>up</phrase>
+  </command>
+
+<command id="305" name="down" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("6180")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>down</phrase>
+  </command>
+
+<command id="303" name="washing machine OFF" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("70")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>washing machine OFF</phrase>
+  </command>
+
+<command id="305" name="washing machine ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("71")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase> washing machine ON</phrase>
+  </command>
+
+
+
+<command id="303" name="fan and light OFF" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("1030")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>fan and light OFF</phrase>
+  </command>
+
+<command id="305" name="fan and light ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("1131")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>fan and light ON</phrase>
+  </command>
+
+
+<command id="303" name="door CLOSED" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("9001")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>door CLOSED</phrase>
+  </command>
+
+<command id="305" name="door OPEN" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("9100")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>door OPEN</phrase>
+  </command>
+
+
+
+  <command id="301" name=" all devices OFF " enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+  <action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite("1020304050607080")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase> all devices OFF</phrase>
+  </command>
+  
+<command id="314" name="all devices ON" enabled="true" alwaysOn="False" confirm="False" requiredConfidence="0" loop="False" loopDelay="0" loopMax="0" description="">
+<action>
+      <cmdType>PY.ExecString</cmdType>
+      <cmdString>arduinoWrite(" 1121314151617181")</cmdString>
+      <cmdRepeat>1</cmdRepeat>
+    </action>
+    <phrase>all devices ON</phrase>
+  </command>
+
+
+</commandGroup>
