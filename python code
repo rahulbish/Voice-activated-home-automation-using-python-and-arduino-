@@ -1,0 +1,10 @@
+import clr
+clr.AddReference('System')
+from System import *
+serialPort = IO.Ports.SerialPort("COM8")
+serialPort.BaudRate = 9600
+serialPort.DataBits = 8
+serialPort.Open()
+
+def arduinoWrite(str):
+    serialPort.Write(str)
